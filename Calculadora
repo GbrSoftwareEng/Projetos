@@ -1,0 +1,40 @@
+#include <stdio.h>
+
+int main(){
+    float a, b, c;
+    char opcao;
+
+    printf("Informe um valor qualquer: ");
+    scanf("%f", &a);
+
+    printf("Informe a operação(+, -, * ou /): ");
+    scanf("%c", &opcao);
+
+    printf("Informe outro valor qualquer: ");
+    scanf("%f", &b);
+
+    if (opcao == '+'){
+        c = a + b;
+    }
+    else if(opcao == '-'){
+        c = a - b;
+    }
+    else if(opcao == '*'){
+        c = a * b;
+    }
+    else if(opcao == '/'){
+        c = a / b;
+            if(b != 0){
+                c = a / b;
+            }
+    else{
+        printf("Erro: Divisão por zero não é permitida!");
+        return 1;
+        }
+    }   else{
+        printf("Erro: Operação Inválida!");
+        return 1;
+    }
+    printf("Resultado da operação: %2.f\n", c);
+    return 0;
+}
